@@ -4,16 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListAccountComponent } from './list-account/list-account.component';
+import { LoginComponent } from './component/login/login.component';
+import { NabBarComponent } from './component/nab-bar/nab-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListAccountComponent
+    ListAccountComponent,
+    LoginComponent,
+    NabBarComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
