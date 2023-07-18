@@ -1,0 +1,57 @@
+<h1>Historique de vos opérations effectuées sur le compte n° 12</h1>
+<h1>Critères de recherche : </h1>
+<div class="container">
+    <form>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                      <div class="col">
+                        <input type="date" name="dateDeb" id="dateDeb" class="form-control" [(ngModel)]="dateDeb">
+                      </div>
+                      <div class="col">
+                        <input type="date" name="dateFin" id="dateFin" class="form-control" [(ngModel)]="dateFin">
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input class="form-check-input ms-2 me-auto" type="checkbox" value="" id="defaultCheck1" [(ngModel)]="credit" name="credit">
+                        <label class="form-check-label" for="defaultCheck1">
+                        Crédit                        
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input ms-2 me-auto" type="checkbox" [(ngModel)]="debit" id="defaultCheck2" name="debit" >
+                        <label class="form-check-label" for="defaultCheck2">
+                        Débit
+                        </label>
+                      </div>
+                </td>
+          </tr>
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary" (click)="handleClick()">Rechercher</button>
+</form>
+<table class="table table-striped table-bordered mt-4 table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Libellé</th>
+            <th scope="col">Montant</th>
+        </tr>
+        <tr *ngFor="let operation of operations">
+            <td>{{operation.date}}</td>
+            <td>{{operation.libelle}}</td>
+            <td>{{operation.montant}}</td>
+        </tr>
+    </thead>
+</table>
+</div>
