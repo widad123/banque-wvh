@@ -1,0 +1,22 @@
+<div class="container col-6 mt-4">
+    <table class="table table-success table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Numéro</th>
+            <th scope="col">Désignation</th>
+            <th scope="col">Taux</th>
+            <th scope="col">Découvert autorisé</th>
+            <th scope="col">Solde</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let account of accounts">
+          <tr>
+            <td >{{account.id}}</td>
+            <td>{{account.libelle}}</td>
+            <td >{{account.taux}}</td>
+            <td>{{account.decouvert}}</td>
+            <td >{{account.solde}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
