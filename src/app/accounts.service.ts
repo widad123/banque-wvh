@@ -17,10 +17,17 @@ export class AccountsService {
 
   constructor(private http:HttpClient) {}
 
+  authentifier(unLogin : string , unMdp : string){
+    const params= new HttpParams()
+        .set("unLogin",unLogin)
+        .set("unMdp",unMdp)
+  return this.http.post<number>(`${this.baseUrl}/authentifier`,null,{params});
+}  
+
   
  getAccounts(utilisateurId: number){
   const params= new HttpParams()
-              .set('unUtilisateurId',1)
+              .set('unUtilisateurId',utilisateurId)
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
  

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AccountsService } from './../../accounts.service';
+
 
 @Component({
   selector: 'app-login',
@@ -7,27 +8,23 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  username!: string;
-  password!: string;
+  unLogin!: string;
+  unMdp!: string;
+  unUtilisateurId!:number;
 
-  constructor(private http: HttpClient) {}
+  constructor(private acs : AccountsService) {}
 
-  login(): void {
-    const apiUrl = 'http://localhost:8080/api/service-banque/authentifier';
-    const formData = new FormData();
-    formData.append('unLogin', this.username);
-    formData.append('unMdp', this.password);
-
-    this.http.post<number>(apiUrl, formData).subscribe(
-      (userId: number) => {
-        // Successful login, handle the response
-        console.log('User ID:', userId);
-        // Redirect or perform any other necessary actions
-      },
-      (error) => {
-        // Error occurred during login, handle the error
-        console.error('Login error:', error);
-      }
-    );
+  authentifier(){
+    console.log(this.acs.authentifier(this.unLogin,this.unMdp));
+   return this.acs.authentifier(this.unLogin,this.unMdp).subscribe({
+    next:id=>{ 
+      this.unUtilisateurId = id;
+      console.log(this.unUtilisateurId);
+     },
+    error:error=>{
+      console.log(error);
+    }
+   });
   }
+ 
 }
