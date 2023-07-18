@@ -29,7 +29,7 @@ export class OperationsComponent {
     } else if (this.debit) {
       this.creditDebit = false;
     } 
-           
+
     console.log(this.creditDebit); // Affiche l'état de la première checkbox (Crédit)
     var dateDebut=this.formaterDate(this.dateDeb);
     console.log(dateDebut);
