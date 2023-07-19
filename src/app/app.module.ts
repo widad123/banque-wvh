@@ -11,8 +11,9 @@ import { AccountsService } from './accounts.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { FooterComponent } from './component/footer/footer.component';
-import { BodyComponent } from './component/body/body.component';
+import{FooterComponent} from './component/footer/footer.component';
+
+import { VirementComponent } from './component/virement/virement.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -22,8 +23,8 @@ registerLocaleData(localeFr);
     LoginComponent,
     NabBarComponent,
     OperationsComponent,
-    FooterComponent,
-    BodyComponent
+    VirementComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,

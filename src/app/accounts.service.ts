@@ -3,9 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Account } from './account';
 import { Operation } from './operation';
-import {NgForm} from '@angular/forms';
-
-
 
 
 @Injectable({
@@ -25,14 +22,15 @@ export class AccountsService {
 }  
 
   
- getAccounts(utilisateurId: number){
+ getAccounts(unUtilisateurId: number){
   const params= new HttpParams()
-              .set('unUtilisateurId',utilisateurId)
+              .set("unUtilisateurId",unUtilisateurId)
+  
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
 
  
- getOperations(unUtilisateurId: number,unCompteId : number,dateDeb : string,dateFin : string,creditDebit : boolean){
+ getOperations(unUtilisateurId: number,unCompteId : number,dateDeb : string,dateFin : string,creditDebit : boolean): Observable<Operation[]> {
   const params= new HttpParams()
               .set('unUtilisateurId',1)
               .set('unCompteId',15)
@@ -42,5 +40,16 @@ export class AccountsService {
 
   return this.http.post<Operation[]>(`${this.baseUrl}/selectOperation`,null,{params});
  }
+
+
+validerVirement(unUtilisateurId:number,unCompteIdSrc:number,unCompteIdDst:number,unMontant:number): Observable<Operation[]> {
+  const params = new HttpParams()
+                .set("unUtilisateurId",unUtilisateurId.toString())
+                .set("unCompteIdSrc",unCompteIdSrc.toString())
+                .set("unCompteIdDst",unCompteIdDst.toString())
+                .set("unMontant",unMontant.toString())
+  console.log(unUtilisateurId,unCompteIdSrc,unCompteIdDst,unMontant);
+  return this.http.post<Operation[]>(`${this.baseUrl}/doVirement`,null,{params});
+}
 
 }

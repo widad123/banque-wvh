@@ -1,0 +1,43 @@
+<div class="container">
+    <form>
+    <table class="table table-striped table-hover">
+          <tr>
+            <td >
+                <label class="input-group-text" for="compteEmetteur">
+                    Compte émetteur
+                </label>
+            </td>
+            <td >
+                <select class="form-select" name="compteEmetteur" id="compteEmetteur" [(ngModel)]="unCompteIdSrc" >
+                    <option selected >--Choix--</option>
+                    <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdSrc" >{{account.libelle}}</option>
+                </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label class="input-group-text" for="compteDestinataire">
+                    Compte destinataire
+                </label>
+            </td>
+            <td>
+                <select class="form-select" name="comptedestinataire" id="compteDestinataire" [(ngModel)]="unCompteIdDst">
+                    <option selected value="comptedestinataire">--Choix--</option>
+                    <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdDst" >{{account.libelle}}</option>
+                </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label class="input-group-text" for="Montant de virement">
+                    Montant de virement
+                </label>
+            </td>
+            <td>
+                <input type="text" class="form-control" id="Montant de virement" [(ngModel)]="unMontant" name="Montant de virement">
+            </td>
+          </tr>
+      </table>
+      <button type="submit" class="btn btn-primary" (click)="validerVirement()">Valider</button>
+    </form>
+</div>
