@@ -1,0 +1,80 @@
+
+
+/* Header styles */
+header {
+    text-align: center;
+    background-color: transparent; /* Enlever la couleur de fond grise */
+    padding: 20px;
+  }
+  
+  header h1 {
+    color: #000; /* Couleur du texte en noir */
+    font-size: 32px; /* Augmenter la taille de police pour le rendre plus visible */
+    font-weight: bold; /* Texte en gras */
+  }
+  
+  /* Presentation section styles */
+  .presentation {
+    padding: 40px 0;
+    color: #000; /* Couleur du texte en noir */
+   background-image: url("src\assets\image\hero_2.jpg"); /* Chemin d'accès vers l'image de fond */
+  background-size: cover; /* Redimensionner l'image pour remplir tout l'espace de la section */
+  background-position: center; /* Centrer l'image dans la section */
+  }
+  
+  .presentation h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700; /* Texte en gras (plus épais) */
+  }
+  
+  .presentation p {
+    font-size: 18px; /* Augmenter la taille de police pour le rendre plus visible */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    font-weight: 600; /* Texte en gras (plus épais) */
+  }
+  
+  .presentation .btn-primary {
+    background-color: #007bff; /* Couleur bleue pour le bouton */
+    border-color: #007bff;
+    font-weight: bold;
+    cursor: pointer; /* Ajout d'un curseur pointer pour indiquer que le bouton est cliquable */
+  }
+  /* Contact form styles */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Rest of the styles... */

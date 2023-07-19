@@ -1,0 +1,97 @@
+<!-- Header of the page -->
+<header class="header">
+    <h1>Welcome to WHV E-Bank</h1>
+  </header>
+  
+  <!-- Presentation section -->
+  <section id="Accueil" class="presentation background-image">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p>
+            Welcome to the WHV E-Bank website! We are a modern and innovative online bank dedicated to providing high-quality banking services to our clients worldwide.
+          </p>
+          <p>
+            At WHV, we focus on security, simplicity, and transparency in all our operations, to offer you a hassle-free and pleasant banking experience.
+          </p>
+          <a href="#services-section" class="btn btn-primary">Discover Our Services</a> <!-- Utilisation de l'ancre pour le lien -->
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services section -->
+  <section class="services bg-light py-5" id="services-section"> <!-- Ajout de l'id "services-section" -->
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-item">
+            <!-- Add an icon representing the service -->
+            <i class="fas fa-credit-card"></i>
+            <h3>Bank Accounts</h3>
+            <p>
+              Open a bank account with us and enjoy various benefits such as reduced fees, quick transfers, and convenient online management.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <!-- Add an icon representing the service -->
+            <i class="fas fa-money-bill"></i>
+            <h3>Loans and Credits</h3>
+            <p>
+              Need a loan to fulfill your projects? Explore our flexible loan and credit offers to support your financial ventures.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <!-- Add an icon representing the service -->
+            <i class="fas fa-shield-alt"></i>
+            <h3>Security and Privacy</h3>
+            <p>
+              The security of your personal information is our top priority. We use the latest technologies to ensure the confidentiality of your data and the security of your online transactions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact section -->
+  <section id="contactForm" class="contact py-5">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions, concerns, or need assistance, feel free to contact us. Our team is here to help you.
+      </p>
+      <form class="contact-form" action="#" method="POST"> <!-- Remplacez "#" par l'URL de votre backend pour traiter le formulaire -->
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number*</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div><br><br><br>
+  </section>
+  
