@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountsService } from './../../accounts.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent {
   unMdp!: string;
   unUtilisateurId!:number;
 
-  constructor(private acs : AccountsService) {}
+  constructor(private acs : AccountsService,private router: Router) {}
 
   authentifier(){
     console.log(this.acs.authentifier(this.unLogin,this.unMdp));
@@ -26,5 +27,10 @@ export class LoginComponent {
     }
    });
   }
- 
+
+  navigateToDestination() {
+  const param =  this.unUtilisateurId;
+  this.router.navigate(['../list-account/list-account.component.ts'], { queryParams: { param } });
+  }
+
 }

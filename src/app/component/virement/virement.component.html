@@ -9,7 +9,7 @@
             </td>
             <td >
                 <select class="form-select" name="compteEmetteur" id="compteEmetteur" [(ngModel)]="unCompteIdSrc" >
-                    <option selected>--Choix--</option>
+                    <option selected >--Choix--</option>
                     <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdSrc" >{{account.libelle}}</option>
                 </select>
             </td>
@@ -22,7 +22,7 @@
             </td>
             <td>
                 <select class="form-select" name="comptedestinataire" id="compteDestinataire" [(ngModel)]="unCompteIdDst">
-                    <option selected>--Choix--</option>
+                    <option selected value="comptedestinataire">--Choix--</option>
                     <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdDst" >{{account.libelle}}</option>
                 </select>
             </td>

@@ -22,9 +22,9 @@ export class AccountsService {
 }  
 
   
- getAccounts(utilisateurId: number){
+ getAccounts(unUtilisateurId: number){
   const params= new HttpParams()
-              .set('unUtilisateurId',1)
+              .set("unUtilisateurId",unUtilisateurId)
   
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
@@ -50,6 +50,5 @@ validerVirement(unUtilisateurId:number,unCompteIdSrc:number,unCompteIdDst:number
   console.log(unUtilisateurId,unCompteIdSrc,unCompteIdDst,unMontant);
   return this.http.post<Operation[]>(`${this.baseUrl}/doVirement`,null,{params});
 }
-
 
 }
