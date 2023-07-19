@@ -13,7 +13,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
+                <form (ngSubmit)="authentifier()">
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <span class="h1 fw-bold mb-0"><img src="../../../assets/image/logobank.png" alt=""></span>
                   </div>
@@ -34,7 +34,7 @@
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="submit" (click)="authentifier()">Login</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit" >Login</button>
                   </div>
 
                   <a class="small text-muted" href="#!">Forgot password?</a>
@@ -43,7 +43,7 @@
                   <a href="#!" class="small text-muted">Terms of use.</a>
                   <a href="#!" class="small text-muted">Privacy policy</a>
                 </form>
-
+               
               </div>
             </div>
           </div>
@@ -53,3 +53,18 @@
   </div>
 </section>
 
+
+ <!-- <div>
+  <h2>Login</h2>
+  <form (ngSubmit)="authentifier()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="unLogin" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="unMdp" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div> -->

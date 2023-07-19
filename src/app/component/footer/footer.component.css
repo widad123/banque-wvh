@@ -1,0 +1,68 @@
+/* Styles spécifiques au footer ici */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  background-color: #333;
+  color: #fff;
+  height: 125px;
+}
+
+/* Styles pour les éléments enfants du footer (par exemple, les titres et les paragraphes) */
+footer h5 {
+  font-size: 16px;
+}
+
+footer p {
+  margin-bottom: 4px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px; /* Ajout d'une marge pour séparer les icônes du titre "Follow Us" */
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.follow-us {
+  margin-bottom: 5px;
+
+}
+
+/* Réglages supplémentaires */
+footer .container {
+  padding-top: 15px;
+}
+.col-md-4 {
+  flex: 1; /* Change from 'flex-basis: 30%' to 'flex: 1' */
+}
+/* Nouveaux styles pour l'alignement approprié */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ajouter cette ligne pour aligner les éléments en haut */
+}
+
+/* Mettre à jour la propriété flex pour la classe .col-md-4 */
+.col-md-4 {
+  flex: 1; /* Modifier de 'flex-basis: 30%' à 'flex: 1' */
+  display: flex;
+  flex-direction: column;
+}
+
+

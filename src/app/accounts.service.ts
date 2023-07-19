@@ -30,6 +30,7 @@ export class AccountsService {
               .set('unUtilisateurId',utilisateurId)
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
+
  
  getOperations(unUtilisateurId: number,unCompteId : number,dateDeb : string,dateFin : string,creditDebit : boolean){
   const params= new HttpParams()

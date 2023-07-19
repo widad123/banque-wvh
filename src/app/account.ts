@@ -5,4 +5,5 @@ export class Account {
     decouvert!:number;
     taux!:number;
     unUtilisateurId!:number;
+
 }

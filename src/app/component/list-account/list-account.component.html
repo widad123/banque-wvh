@@ -1,22 +1,44 @@
-<div class="container col-6 mt-4">
-    <table class="table table-success table-striped table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Numéro</th>
-            <th scope="col">Désignation</th>
-            <th scope="col">Taux</th>
-            <th scope="col">Découvert autorisé</th>
-            <th scope="col">Solde</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let account of accounts">
-          <tr>
-            <td >{{account.id}}</td>
-            <td>{{account.libelle}}</td>
-            <td >{{account.taux}}</td>
-            <td>{{account.decouvert}}</td>
-            <td >{{account.solde}}</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+
+
+<section class="intro">
+  <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img4.jpg');">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(25, 185, 234,.25);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Numéro</th>
+                        <th scope="col">Désignation</th>
+                        <th scope="col">Taux</th>
+                        <th scope="col">Découvert autorisé</th>
+                        <th scope="col">Solde</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let account of accounts">
+                      <tr>
+                        <th scope="row"></th>
+                        <td>{{account.id}}</td>
+                        <td>{{account.libelle}}</td>
+                        <td>{{account.taux}}</td>
+                        <td>{{account.decouvert}}</td>
+                        <td>{{account.solde}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

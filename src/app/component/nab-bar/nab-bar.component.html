@@ -17,10 +17,18 @@
         <li class="nav-item">
           <a class="nav-link mx-2" href="#">About Us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="accounts">accounts </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="operations">operations</a>
+        </li>
        
         <li class="nav-item">
-          <a class="nav-link mx-2" href="#" (click)="showLoginForm()">Connexion</a>
+          <a class="nav-link mx-2" routerLink="login" (click)="toggleLoginState()" *ngIf="!isLoggedIn">Connexion</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2"  (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
       </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
         
@@ -37,3 +45,4 @@
     </div>
   </div>
 </nav>
+<app-login *ngIf="showLogin" (onLogin)="loginSuccessful()" (onLogout)="logoutSuccessful()"></app-login>
