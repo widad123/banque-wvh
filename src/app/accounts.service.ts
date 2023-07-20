@@ -32,11 +32,11 @@ export class AccountsService {
  
  getOperations(unUtilisateurId: number,unCompteId : number,dateDeb : string,dateFin : string,creditDebit : boolean): Observable<Operation[]> {
   const params= new HttpParams()
-              .set('unUtilisateurId',1)
-              .set('unCompteId',15)
-              .set('dateDeb',dateDeb)
-              .set('dateFin',dateFin)
-              .set('creditDebit',creditDebit)
+              .set('unUtilisateurId',unUtilisateurId.toString())
+              .set('unCompteId',unCompteId.toString())
+              .set('dateDeb',dateDeb.toString())
+              .set('dateFin',dateFin.toString())
+              .set('creditDebit',creditDebit.toString())
 
   return this.http.post<Operation[]>(`${this.baseUrl}/selectOperation`,null,{params});
  }

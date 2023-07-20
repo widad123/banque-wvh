@@ -31,7 +31,7 @@
 //   }
 // }
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute ,Router} from '@angular/router';
 import { AccountsService } from '../../accounts.service';
 import { Account } from '../../account';
 
@@ -42,9 +42,11 @@ import { Account } from '../../account';
 })
 export class ListAccountComponent implements OnInit {
   @Input() userId!: number;
+  unCompteId!: number;
   accounts: Account[] = [];
 
-  constructor(private acs: AccountsService, private route: ActivatedRoute) {}
+  constructor(private acs: AccountsService, private route: ActivatedRoute,  private router: Router,
+    ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {

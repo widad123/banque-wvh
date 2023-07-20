@@ -2,6 +2,8 @@ import { Component ,OnInit } from '@angular/core';
 import { AccountsService } from './../../accounts.service';
 import { Operation } from 'src/app/operation';
 import { formatDate } from "@angular/common";
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-operations',
@@ -10,8 +12,8 @@ import { formatDate } from "@angular/common";
 })
 export class OperationsComponent implements OnInit{
   operations !: Operation[];
-  unUtilisateurId : number=1;
-  unCompteId : number=12;
+  unUtilisateurId !: number;
+  unCompteId !: number;
   dateDeb !: Date ;
   dateFin !: Date;
   creditDebit !:boolean;
@@ -21,10 +23,15 @@ export class OperationsComponent implements OnInit{
   formaterDate(date:Date){
     return formatDate(date,"yyyy-MM-dd'T'HH:mm:ss'Z'",'fr-FR');
   }
-  constructor(private acs : AccountsService){}
+  constructor(private acs : AccountsService, private route: ActivatedRoute){}
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this. unUtilisateurId = params['userId'];
+      console.log(this.unUtilisateurId);
+      this.unCompteId = params['unCompteId'];
     this.getAllOperations();
+  });
   }
   
   handleClick(){
