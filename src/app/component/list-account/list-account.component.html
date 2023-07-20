@@ -8,7 +8,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <div class="table-responsive">
+                <div class="table-responsive" >
                   <table class="table table-hover mb-0">
                     <thead>
                       <tr>
@@ -23,11 +23,18 @@
                     <tbody *ngFor="let account of accounts">
                       <tr>
                         <th scope="row"></th>
-                        <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.id}}</a></td>
+                        <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id, libelle : account.libelle }">{{account.id}}</a></td>
                         <td>{{account.libelle}}</td>
                         <td>{{account.taux}}</td>
                         <td>{{account.decouvert}}</td>
                         <td>{{account.solde}}</td>
+                        <td>
+                          <button classe="btn btn-primary">
+                            <a [routerLink]="['/virement']"  [queryParams]="{ userId: userId, accounts: convertToJSON(accounts) }">
+                              Virement
+                            </a>
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

@@ -16,16 +16,15 @@ export class AccountsService {
 
   authentifier(unLogin : string , unMdp : string){
     const params= new HttpParams()
-        .set("unLogin",unLogin)
-        .set("unMdp",unMdp)
+        .set("unLogin",unLogin.toString())
+        .set("unMdp",unMdp.toString())
   return this.http.post<number>(`${this.baseUrl}/authentifier`,null,{params});
 }  
 
   
  getAccounts(unUtilisateurId: number){
   const params= new HttpParams()
-              .set("unUtilisateurId",unUtilisateurId)
-  
+              .set("unUtilisateurId",unUtilisateurId.toString())
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
 
@@ -55,7 +54,6 @@ validerVirement(unUtilisateurId:number,unCompteIdSrc:number,unCompteIdDst:number
                 .set("unCompteIdSrc",unCompteIdSrc.toString())
                 .set("unCompteIdDst",unCompteIdDst.toString())
                 .set("unMontant",unMontant.toString())
-  console.log(unUtilisateurId,unCompteIdSrc,unCompteIdDst,unMontant);
   return this.http.post<Operation[]>(`${this.baseUrl}/doVirement`,null,{params});
 }
 

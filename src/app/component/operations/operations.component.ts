@@ -19,6 +19,7 @@ export class OperationsComponent implements OnInit{
   creditDebit !:boolean;
   credit :boolean = false;
   debit :boolean = false;
+  libelle!:string;
 
   formaterDate(date:Date){
     return formatDate(date,"yyyy-MM-dd'T'HH:mm:ss'Z'",'fr-FR');
@@ -30,6 +31,7 @@ export class OperationsComponent implements OnInit{
       this. unUtilisateurId = params['userId'];
       console.log(this.unUtilisateurId);
       this.unCompteId = params['unCompteId'];
+      console.log(this.unCompteId);
     this.getAllOperations();
   });
   }
