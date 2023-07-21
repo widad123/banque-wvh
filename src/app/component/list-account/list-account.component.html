@@ -1,6 +1,5 @@
-
-
-<section class="intro">
+<section class="intro" >
+ 
   <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img4.jpg');">
     <div class="mask d-flex align-items-center h-100" style="background-color: rgba(25, 185, 234,.25);">
       <div class="container">
@@ -9,6 +8,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="table-responsive">
+                 
                   <table class="table table-hover mb-0">
                     <thead>
                       <tr>
@@ -23,14 +23,17 @@
                     <tbody *ngFor="let account of accounts">
                       <tr>
                         <th scope="row"></th>
-                        <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.id}}</a></td>
-                        <td>{{account.libelle}}</td>
+                        <td ><a >{{account.id}}</a></td>
+                        <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.libelle}}</a></td>
+                        
                         <td>{{account.taux}}</td>
                         <td>{{account.decouvert}}</td>
                         <td>{{account.solde}}</td>
+                        <td><button class="btn btn-primary" [routerLink]="['/virements']"  [queryParams]="{ userId: userId, unCompteId: account.id }">virement</button></td>
                       </tr>
                     </tbody>
                   </table>
+              
                 </div>
               </div>
             </div>

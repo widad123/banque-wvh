@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light  p-3">
   <div class="container-fluid">
-    <a class="navbar-brand " href="#" ><img src="../../../assets/image/logobank.png" alt="logo" height="50" width="100"></a>
+    <a class="navbar-brand " href="#"><img src="../../../assets/image/logobank.png" alt="logo" height="50"
+        width="100"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,21 +18,21 @@
         <li class="nav-item">
           <a class="nav-link mx-2" href="#">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="accounts">accounts </a>
+        <!-- <li class="nav-item">
+          <a class="nav-link mx-2" [routerLink]="['/operations']"
+            [queryParams]="{ unCompteId: accounts[0].id }"
+            *ngIf="isLoggedIn ">accounts </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="operations">operations</a>
-        </li>
-       
+          <a class="nav-link mx-2" routerLink="operations" *ngIf="isLoggedIn">operations</a>
+        </li> -->
+
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="login" (click)="toggleLoginState()" *ngIf="!isLoggedIn">Connexion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2"  (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
+          <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'logout' : 'connexion'
+            }}</a>
       </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-        
+
         <li class="nav-item mx-2">
           <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
         </li>
@@ -45,4 +46,4 @@
     </div>
   </div>
 </nav>
-<app-login *ngIf="showLogin" (onLogin)="loginSuccessful()" (onLogout)="logoutSuccessful()"></app-login>
+<app-login [hidden]="!showLogin" (onLogin)="loginSuccessful($event)" (onLogout)="logoutSuccessful()"></app-login>

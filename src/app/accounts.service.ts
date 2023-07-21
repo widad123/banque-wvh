@@ -41,12 +41,22 @@ export class AccountsService {
   return this.http.post<Operation[]>(`${this.baseUrl}/selectOperation`,null,{params});
  }
 
- getAllOperations(unUtilisateurId:number,unCompteId:number){
-  const params= new HttpParams()
-                .set('unUtilisateurId',unUtilisateurId.toString())
-                .set('unCompteId',unCompteId.toString())
- return this.http.post<Operation[]>(`${this.baseUrl}/allOperations`,null,{params})
- }
+//  getAllOperations(unUtilisateurId:number,unCompteId:number){
+//   const params= new HttpParams()
+//                 .set('unUtilisateurId',unUtilisateurId.toString())
+//                 .set('unCompteId',unCompteId.toString())
+//  return this.http.post<Operation[]>(`${this.baseUrl}/allOperations`,null,{params})
+//  }
+getAllOperations(unUtilisateurId: number, unCompteId: number) {
+  console.log('unUtilisateurId:', unUtilisateurId);
+  console.log('unCompteId:', unCompteId);
+  
+  const params = new HttpParams()
+    .set('unUtilisateurId', unUtilisateurId.toString())
+    .set('unCompteId', unCompteId.toString());
+
+  return this.http.post<Operation[]>(`${this.baseUrl}/allOperations`, null, { params });
+}
 
 
 validerVirement(unUtilisateurId:number,unCompteIdSrc:number,unCompteIdDst:number,unMontant:number): Observable<Operation[]> {

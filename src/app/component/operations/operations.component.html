@@ -40,18 +40,45 @@
     </table>
     <button type="submit" class="btn btn-primary" (click)="handleClick()">Rechercher</button>
 </form>
-<table class="table table-striped table-bordered mt-4 table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Libellé</th>
-            <th scope="col">Montant</th>
-        </tr>
-        <tr *ngFor="let operation of operations">
-            <td>{{operation.date}}</td>
-            <td>{{operation.libelle}}</td>
-            <td>{{operation.montant}}</td>
-        </tr>
-    </thead>
-</table>
-</div>
+
+<section class="intro mt-5" >
+ 
+    <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img4.jpg');">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(25, 185, 234,.25);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                   
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Libellé</th>
+                          <th scope="col">Montant</th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                        <tr *ngFor="let operation of operations">
+                            <td>{{operation.date}}</td>
+                            <td>{{operation.libelle}}</td>
+                            <td>{{operation.montant}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  

@@ -58,7 +58,6 @@ export class OperationsComponent implements OnInit{
       }
     })
   }
-
   getOperation(unUtilisateurId: number,unCompteId : number,dateDeb : any,dateFin : any,creditDebit : boolean){
     this.acs.getOperations(unUtilisateurId,unCompteId,dateDeb,dateFin,creditDebit).subscribe({
       next: data => {
