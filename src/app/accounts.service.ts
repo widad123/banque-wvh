@@ -24,8 +24,7 @@ export class AccountsService {
   
  getAccounts(unUtilisateurId: number){
   const params= new HttpParams()
-              .set("unUtilisateurId",unUtilisateurId)
-  
+              .set("unUtilisateurId",unUtilisateurId.toString())
   return this.http.post<Account[]>(`${this.baseUrl}/selectCompte`,null,{params});
  }
 
