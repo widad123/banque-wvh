@@ -8,7 +8,7 @@
               <div class="card-body">
                 <div class="table-responsive" >
                 <div class="table-responsive">  
-                  <table class="table table-hover mb-0">
+                  <table class="table table-hover mb-0" >
                     <thead>
                       <tr>
                         <th scope="col"></th>
@@ -24,15 +24,12 @@
                         <th scope="row"></th>
                         <td ><a >{{account.id}}</a></td>
                         <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.libelle}}</a></td>
-                        
                         <td>{{account.taux}}</td>
                         <td>{{account.decouvert}}</td>
                         <td>{{account.solde}}</td>
                         <td>
                           <button class="btn btn-primary" [routerLink]="['/virement']"  [queryParams]="{ userId: userId, accounts: convertToJSON(accounts) }">
-                           
                               Virement
-                          
                           </button>
                         </td>
                       </tr>
