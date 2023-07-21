@@ -12,11 +12,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import{FooterComponent} from './component/footer/footer.component';
-
-
-
-
 import { VirementComponent } from './component/virement/virement.component';
+import { ContactFormComponent } from './component/contact-form/contact-form.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -27,7 +24,8 @@ registerLocaleData(localeFr);
     NabBarComponent,
     OperationsComponent,
     VirementComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
     HttpClientModule,
