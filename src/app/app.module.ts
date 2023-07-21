@@ -13,6 +13,9 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import{FooterComponent} from './component/footer/footer.component';
 
+
+
+
 import { VirementComponent } from './component/virement/virement.component';
 registerLocaleData(localeFr);
 

@@ -9,7 +9,7 @@
             </td>
             <td >
                 <select class="form-select" name="compteEmetteur" id="compteEmetteur" [(ngModel)]="unCompteIdSrc" >
-                    <option selected >--Choix--</option>
+                    <option selected value="0">--Choix--</option>
                     <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdSrc" >{{account.libelle}}</option>
                 </select>
             </td>
@@ -21,9 +21,9 @@
                 </label>
             </td>
             <td>
-                <select class="form-select" name="comptedestinataire" id="compteDestinataire" [(ngModel)]="unCompteIdDst">
-                    <option selected value="comptedestinataire">--Choix--</option>
-                    <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdDst" >{{account.libelle}}</option>
+                <select class="form-select"  id="compteDestinataire" name="unCompteIdDst" [(ngModel)]="unCompteIdDst">
+                    <option selected value="0">--Choix--</option>
+                    <option *ngFor="let account of accounts" [value]="account.id" >{{account.libelle}}</option>
                 </select>
             </td>
           </tr>
@@ -39,6 +39,9 @@
           </tr>
       </table>
       <button type="submit" class="btn btn-primary" (click)="validerVirement()">Valider</button>
+      <div class="alert alert-success mt-4" *ngIf="isValid">
+        <span  role="alert">Votre virement a été effectué</span>
+    </div>
     </form>
 </div>
 

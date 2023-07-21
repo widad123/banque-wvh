@@ -45,14 +45,18 @@ export class ListAccountComponent implements OnInit {
   unCompteId!: number;
   accounts: Account[] = [];
 
-  constructor(private acs: AccountsService, private route: ActivatedRoute,  private router: Router,
-    ) {}
+  constructor(private acs: AccountsService, private route: ActivatedRoute,  private router: Router) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.userId = params['userId'];
       this.getAccount();
     });
+  }
+
+   // Méthode pour convertir des objets en chaîne JSON
+   public convertToJSON(data: any): string {
+    return JSON.stringify(data);
   }
 
   getAccount() {
