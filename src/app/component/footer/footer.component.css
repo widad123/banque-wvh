@@ -1,26 +1,29 @@
 /* Styles spécifiques au footer ici */
+
+/* Footer styles */
 footer {
-  position: fixed;
+  position: fixed; /* Fix the footer to the bottom of the viewport */
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* Set the width to cover the entire viewport */
   padding: 10px;
   font-size: 12px;
   line-height: 1.2;
   background-color: #333;
   color: #fff;
-  height: 125px;
+  height: 125px; /* Set the height of the footer to 125 pixels */
 }
 
-/* Styles pour les éléments enfants du footer (par exemple, les titres et les paragraphes) */
+/* Styles for the child elements of the footer (e.g., headings and paragraphs) */
 footer h5 {
-  font-size: 16px;
+  font-size: 16px; /* Set the font size for h5 elements within the footer */
 }
 
 footer p {
-  margin-bottom: 4px;
+  margin-bottom: 4px; /* Add margin at the bottom of paragraphs within the footer */
 }
 
+/* Social icons styles */
 .social-icons {
   display: flex;
   flex-direction: column;
@@ -30,39 +33,38 @@ footer p {
 
 .icon-row {
   display: flex;
-  gap: 10px;
-  margin-top: 5px; /* Ajout d'une marge pour séparer les icônes du titre "Follow Us" */
+  gap: 10px; /* Set the gap between social icons within the icon row */
+  margin-top: 5px; /* Add a margin to separate the icons from the "Follow Us" title */
 }
 
 .social-icons a {
-  color: #fff;
-  font-size: 24px;
+  color: #fff; /* Set the color of social icons to white */
+  font-size: 24px; /* Set the font size of social icons */
 }
 
 .follow-us {
-  margin-bottom: 5px;
-
+  margin-bottom: 5px; /* Add margin at the bottom of the "Follow Us" title */
 }
 
-/* Réglages supplémentaires */
+/* Additional adjustments */
 footer .container {
-  padding-top: 15px;
+  padding-top: 15px; /* Add padding to the container within the footer */
 }
+
 .col-md-4 {
   flex: 1; /* Change from 'flex-basis: 30%' to 'flex: 1' */
 }
-/* Nouveaux styles pour l'alignement approprié */
+
+/* New styles for proper alignment */
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Ajouter cette ligne pour aligner les éléments en haut */
+  align-items: flex-start; /* Add this line to align elements to the top */
 }
 
-/* Mettre à jour la propriété flex pour la classe .col-md-4 */
+/* Update the flex property for the .col-md-4 class */
 .col-md-4 {
-  flex: 1; /* Modifier de 'flex-basis: 30%' à 'flex: 1' */
+  flex: 1; /* Change from 'flex-basis: 30%' to 'flex: 1' */
   display: flex;
   flex-direction: column;
 }
-
-

@@ -1,80 +1,77 @@
-<!-- contact partie start -->
-<section class="site-section bg-light" >
+<!-- Contact Partie Start -->
+<section class="site-section" id="contact">
   <div class="container">
-    <div class="row mb-5">
+    <div class="row">
       <div class="col-12 text-center">
-        <h2 class=" mb-3">Contact Us</h2>
+        <h2 class="mb-1">Contact Us</h2>
       </div>
     </div>
-    <div class="row mb-5">
+    <!-- Contact information row -->
+    <div class="row mb-">
       <div class="col-md-4 text-center">
-        <p class="mb-4">
-          <span class=" d-block h2 text-primary"><i class="fa-solid fa-location-dot"></i></span>
+        <p class="mb-">
+          <span class="d-block h2 text-primary"><i class="fa-solid fa-location-dot"></i></span>
           <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
         </p>
       </div>
       <div class="col-md-4 text-center">
-        <p class="mb-4">
-          <span class=" d-block h2 text-primary"><i class="fa-solid fa-phone-volume"></i></span>
+        <p class="mb-">
+          <span class="d-block h2 text-primary"><i class="fa-solid fa-phone-volume"></i></span>
           <a href="#">+1 232 3235 324</a>
         </p>
       </div>
       <div class="col-md-4 text-center">
         <p class="mb-0">
-          <span class=" d-block h2 text-primary"><i class="fa-solid fa-envelope"></i></span>
+          <span class="d-block h2 text-primary"><i class="fa-solid fa-envelope"></i></span>
           <a href="#">youremail@domain.com</a>
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12 mb-5">
-        <form action="#" class="p-5 bg-white" (submit)="submitForm()">
-          
-          <h2 class="h4 text-black mb-5">Contact Form</h2> 
-
+    <!-- Contact form row -->
+    <div class="row justify-content-center" id="contactForm">
+      <div class="col-8 mb-5">
+        <form action="#" (submit)="submitForm()">
+          <!-- First Name and Last Name input fields -->
           <div class="row form-group">
-            <div class="col-md-6 mb-3 mb-md-0">
-              <label class="text-black" for="fname">First Name</label>
+            <div class="col-md-6 mb-3 mb-md-0 form-outline">
+              <label class="text-white" for="fname">First Name</label>
               <input type="text" id="fname" class="form-control" name="fName" required [(ngModel)]="formData.fName">
             </div>
-            <div class="col-md-6">
-              <label class="text-black" for="lname">Last Name</label>
+            <div class="col-md-6 form-outline">
+              <label class="text-white" for="lname">Last Name</label>
               <input type="text" id="lname" class="form-control" name="lName" required [(ngModel)]="formData.lName">
             </div>
           </div>
-
+          <!-- Email input field -->
           <div class="row form-group">
-            
-            <div class="col-md-12">
-              <label class="text-black" for="email">Email</label> 
+            <div class="col-md-12 form-outline">
+              <label class="text-white" for="email">Email</label>
               <input type="email" id="email" class="form-control" name="email" required [(ngModel)]="formData.email">
             </div>
           </div>
-
+          <!-- Subject input field -->
           <div class="row form-group">
-            
-            <div class="col-md-12">
-              <label class="text-black" for="subject">Subject</label> 
-              <input type="subject" id="subject" class="form-control">
+            <div class="col-md-12 form-outline">
+              <label class="text-white" for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control">
             </div>
           </div>
-
-          <div class="row form-group">
+          <!-- Message textarea -->
+          <div class="row form-group form-outline">
             <div class="col-md-12">
-              <label class="text-black" for="message">Message</label> 
-              <textarea name="message" id="message" required [(ngModel)]="formData.message"  cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+              <label class="text-white" for="message">Message</label>
+              <textarea name="message" id="message" required [(ngModel)]="formData.message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
             </div>
           </div>
-
-          <div class="row form-group">
-            <div class="col-md-12">
+          <!-- Submit button -->
+          <div class="row form-group ">
+            <div class="col-md-12 m-3">
               <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
             </div>
           </div>
         </form>
       </div>
-      
     </div>
   </div>
 </section>
-<!-- partie contact fini -->
+<!-- Contact Partie Fini -->

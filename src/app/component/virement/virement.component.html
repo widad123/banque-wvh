@@ -1,62 +1,103 @@
 <div class="container">
- <div class="col-12 shadow p-3 mb-5 bg-white rounded">
-  <div class="card">
-    <div class="card-body">
-      <div class="table-responsive" >
-        <div class="table-responsive">  
-         <form>
-          <table class = "table table-striped table-hover">
-           <tr>
-            <td>
-             <label class = "input-group-text" for = "compteEmetteur">
-                    Compte émetteur
-             </label>
-            </td>
-            <td >
-                <select class="form-select" name="compteEmetteur" id="compteEmetteur" [(ngModel)]="unCompteIdSrc" >
-                    <option selected value="0">--Choix--</option>
-                    <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdSrc" >{{account.libelle}}</option>
-                </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-                <label class="input-group-text" for="compteDestinataire">
-                    Compte destinataire
-                </label>
-            </td>
-            <td>
-                <select class="form-select"  id="compteDestinataire" name="unCompteIdDst" [(ngModel)]="unCompteIdDst">
-                    <option selected value="0">--Choix--</option>
-                    <option *ngFor="let account of accounts" [value]="account.id" >{{account.libelle}}</option>
-                </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-                <label class="input-group-text" for="Montant de virement">
-                    Montant de virement
-                </label>
-            </td>
-            <td>
-                <input type="text" class="form-control" id="Montant de virement" [(ngModel)]="unMontant" name="Montant de virement">
-            </td>
-          </tr>
-      </table>
-      <button type="submit" class="btn btn-primary" (click)="validerVirement()">Valider</button>
-      <div class="alert alert-success mt-4" *ngIf="isValid">
-        <span  role="alert">
-            Votre virement a été effectué
-        </span>
-       </div>
-      </form>
-     </div>
+    <!-- Outer container for the entire content -->
+  
+    <div class="col-12 shadow p-3 mb-5 bg-white rounded">
+      <!-- A card element with shadow, padding, and rounded corners -->
+  
+      <div class="card">
+        <!-- The main card content -->
+  
+        <div class="card-body">
+          <!-- The body of the card -->
+  
+          <div class="table-responsive">
+            <!-- A responsive container for the table -->
+  
+            <form>
+              <!-- A form element -->
+  
+              <table class="table table-striped table-hover">
+                <!-- A table with striped rows and hover effect -->
+  
+                <tr>
+                  <!-- First row in the table -->
+  
+                  <td>
+                    <!-- First column in the first row -->
+                    <label class="input-group-text" for="compteEmetteur">
+                      Compte émetteur
+                    </label>
+                  </td>
+  
+                  <td>
+                    <!-- Second column in the first row -->
+                    <select class="form-select" name="compteEmetteur" id="compteEmetteur" [(ngModel)]="unCompteIdSrc">
+                      <!-- A dropdown select element to choose the sender account -->
+                      <option selected value="0">--Choix--</option>
+                      <!-- Default option with no value -->
+                      <option *ngFor="let account of accounts" [value]="account.id" name="unCompteIdSrc">
+                        {{ account.libelle }}
+                      </option>
+                      <!-- Iterate through accounts and create options -->
+                    </select>
+                  </td>
+                </tr>
+  
+                <tr>
+                  <!-- Second row in the table -->
+  
+                  <td>
+                    <!-- First column in the second row -->
+                    <label class="input-group-text" for="compteDestinataire">
+                      Compte destinataire
+                    </label>
+                  </td>
+  
+                  <td>
+                    <!-- Second column in the second row -->
+                    <select class="form-select" id="compteDestinataire" name="unCompteIdDst" [(ngModel)]="unCompteIdDst">
+                      <!-- A dropdown select element to choose the recipient account -->
+                      <option selected value="0">--Choix--</option>
+                      <!-- Default option with no value -->
+                      <option *ngFor="let account of accounts" [value]="account.id">
+                        {{ account.libelle }}
+                      </option>
+                      <!-- Iterate through accounts and create options -->
+                    </select>
+                  </td>
+                </tr>
+  
+                <tr>
+                  <!-- Third row in the table -->
+  
+                  <td>
+                    <!-- First column in the third row -->
+                    <label class="input-group-text" for="Montant de virement">
+                      Montant de virement
+                    </label>
+                  </td>
+  
+                  <td>
+                    <!-- Second column in the third row -->
+                    <input type="text" class="form-control" id="Montant de virement" [(ngModel)]="unMontant" name="Montant de virement">
+                    <!-- Input field to enter the amount to transfer -->
+                  </td>
+                </tr>
+              </table>
+  
+              <button type="submit" class="btn btn-primary" (click)="validerVirement()">Valider</button>
+              <!-- Submit button to perform the transaction -->
+  
+              <div class="alert alert-success mt-4" *ngIf="isValid">
+                <!-- A success message to display if the transaction is successful -->
+                <span role="alert">
+                  Votre virement a été effectué
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   </div>
- </div>
-</div>
-
-
-
-
+  

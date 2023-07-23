@@ -1,9 +1,56 @@
-/* .banner{
-  background-color: #F8D49D;
-} */
-.row{
-  align-items:center;
+/* Styles for the banner section */
+/* ---------------------------- */
+
+/* Set background color for the .banner class */
+.banner {
+  background-color: #F8D49D; /* Use #F8D49D (light yellow) as the background color */
 }
-.site-section{
-  margin-bottom: 80px;
+
+
+/* Styles for the different sections */
+/* -------------------------------- */
+
+/* Align items in the row to center */
+.row {
+  align-items: center; /* Vertically center-align items within the row */
+}
+
+/* Styles for the #banner section */
+/* ----------------------------- */
+
+/* Set background color, height, and padding for the #banner ID */
+#banner {
+  background-color: #3B74C0; /* Use #3B74C0 (blue) as the background color */
+  height: 600px; /* Set the height of the banner section to 600 pixels */
+  padding: 3rem; /* Add 3 units of padding around the content in the #banner section */
+}
+
+/* Styles for the #about-us section */
+/* ------------------------------- */
+
+/* Set background color, height, and padding for the #about-us ID */
+#about-us {
+  background-color: #E3EAFB; /* Use #E3EAFB (light blue) as the background color */
+  height: 800px; /* Set the height of the about-us section to 800 pixels */
+  padding: 4rem; /* Add 4 units of padding around the content in the #about-us section */
+}
+
+/* Styles for the #services section */
+/* -------------------------------- */
+
+/* Set background color, height, and padding for the #services ID */
+#services {
+  background-color: #FEFFFF; /* Use #FEFFFF (off-white) as the background color */
+  height: 800px; /* Set the height of the services section to 800 pixels */
+  padding: 4rem; /* Add 4 units of padding around the content in the #services section */
+}
+
+/* Styles for the #team section */
+/* ---------------------------- */
+
+/* Set background color, height, and padding for the #team ID */
+#team {
+  background-color: #E3EAFB;/* Use #3B74C0 (blue) as the background color */
+  height: 700px; /* Set the height of the team section to 700 pixels */
+  padding: 5rem; /* Add 5 units of padding around the content in the #team section */
 }
