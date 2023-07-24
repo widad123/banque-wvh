@@ -6,6 +6,7 @@
  /* Use #FFFFFF (white) as the background color */
   height: 900px; /* Set the height of the contact section to 900 pixels */
   padding: 3rem; /* Add 3 units of padding around the content in the #contact section */
+  
 }
 
 
@@ -18,4 +19,5 @@
   width: 900px; /* Set the width of the contact form section to 900 pixels */
   padding: 5rem; /* Add 5 units of padding around the content in the #contactForm section */
   margin: auto; /* Center the #contactForm section horizontally on the page */
+  
 }

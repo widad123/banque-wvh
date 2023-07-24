@@ -27,8 +27,8 @@ const routes: Routes = [
   // Route for the VirementComponent
   { path: 'virement', component: VirementComponent },
 
-  //Route for contact us
-  { path: 'contact', component: ContactFormComponent }
+    // Route for the conatctFormComponenet
+    { path: 'contact', component: ContactFormComponent }
 ];
 
 @NgModule({
