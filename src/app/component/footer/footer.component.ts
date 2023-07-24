@@ -6,12 +6,5 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./footer.component.css'] // The array of CSS stylesheets for this component
 })
 export class FooterComponent {
-  // showFooter: boolean = false; // Boolean variable to control the visibility of the footer, initially set to false
-
-  // // HostListener decorator that listens for the 'window:scroll' event
-  // @HostListener('window:scroll', ['$event'])
-  // onScroll(event: Event) {
-  //   // Check if the bottom of the viewport has reached the bottom of the document body
-  //   this.showFooter = window.innerHeight + window.scrollY >= document.body.offsetHeight;
-  // }
+ 
 }

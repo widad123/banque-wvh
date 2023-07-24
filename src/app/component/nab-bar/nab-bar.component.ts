@@ -41,6 +41,7 @@ export class NabBarComponent {
   logoutSuccessful() {
     this.isLoggedIn = false;
     this.showLogin = false;
+    this.router.navigate(['/']);
   }
 // Function to handle logout
  logout() {
@@ -58,6 +59,7 @@ export class NabBarComponent {
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
       loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+      this.router.navigate(['/']);
     }
   }
 

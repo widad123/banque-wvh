@@ -9,6 +9,7 @@ import { OperationsComponent } from './component/operations/operations.component
 import { BodyComponent } from './component/body/body.component';
 import { VirementComponent } from './component/virement/virement.component';
 import { ContactFormComponent } from './component/contact-form/contact-form.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 // Define your routes using the Routes array
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
 
   // Route for the LoginComponent
   { path: 'login', component: LoginComponent },
+
 
   // Route for the ListAccountComponent
   { path: 'accounts', component: ListAccountComponent },
