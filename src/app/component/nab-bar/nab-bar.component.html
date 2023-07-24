@@ -38,7 +38,15 @@
         </li>
         <!-- Connexion/Logout link, conditionally shown based on 'isLoggedIn' property -->
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion' }}</a>
+         <!-- <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion' }}</a>-->
+          <ng-container *ngIf="isLoggedIn; else loginLink">
+            <!-- Show Logout link when isLoggedIn is true -->
+            <a class="nav-link mx-2" routerLink="/home" (click)="logout()">{{'Logout'}}</a>
+          </ng-container>
+          <ng-template #loginLink>
+            <!-- Show Connexion link when isLoggedIn is false -->
+            <a class="nav-link mx-2" routerLink="/login" (click)="showLoginForm()">{{'Connexion'}}</a>
+          </ng-template>
         </li>
       </ul>
 

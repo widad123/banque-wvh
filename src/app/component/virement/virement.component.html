@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4" style="height: 60%;">
     <!-- Outer container for the entire content -->
   
     <div class="col-12 shadow p-3 mb-5 bg-white rounded">
@@ -86,8 +86,8 @@
               </table>
   
               <button type="submit" class="btn btn-primary" (click)="validerVirement()">Valider</button>
+              <button class="btn btn-primary mx-2"  [routerLink]="['/accounts']" [queryParams]="{ userId: unUtilisateurId }">List des comptes</button>
               <!-- Submit button to perform the transaction -->
-  
               <div class="alert alert-success mt-4" *ngIf="isValid">
                 <!-- A success message to display if the transaction is successful -->
                 <span role="alert">
