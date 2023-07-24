@@ -1,3 +1,4 @@
+// Import Angular modules and components
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,15 +12,15 @@ import { AccountsService } from './accounts.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import{FooterComponent} from './component/footer/footer.component';
-
-
-
-
+import { FooterComponent } from './component/footer/footer.component';
 import { VirementComponent } from './component/virement/virement.component';
+import { ContactFormComponent } from './component/contact-form/contact-form.component';
+
+// Register French locale for formatting dates, numbers, etc.
 registerLocaleData(localeFr);
 
 @NgModule({
+  // Declare all components used in the application
   declarations: [
     AppComponent,
     ListAccountComponent,
@@ -27,18 +28,25 @@ registerLocaleData(localeFr);
     NabBarComponent,
     OperationsComponent,
     VirementComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
+
+  // Import necessary Angular modules for the application
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
+
+  // Provide services that will be shared across the application
   providers: [
     AccountsService,
-    { provide: LOCALE_ID, useValue: 'fr-FR'}
+    { provide: LOCALE_ID, useValue: 'fr-FR'} // Set the locale to French for the app
   ],
+
+  // Define the root component that will bootstrap the application
   bootstrap: [AppComponent]
 })
 export class AppModule { }

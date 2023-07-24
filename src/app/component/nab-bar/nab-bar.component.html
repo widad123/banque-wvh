@@ -1,47 +1,65 @@
-<nav class="navbar navbar-expand-lg navbar-light  p-3">
+<!-- The navigation bar section -->
+<nav class="navbar navbar-expand-lg p-1"> <!-- Reduced padding to 1 for the navbar -->
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="../../../assets/image/logobank.png" alt="logo" height="100" width="150"></a>
+    <!-- Brand logo -->
+    <a class="navbar-brand" href="#">
+      <!-- Use the regular img tag for the logo -->
+      <img src="../../../assets/image/logobank.png" alt="logo" height="70" width="150">
+    </a>
+
+    <!-- Navbar toggler for small screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto ">
+    <!-- Collapsible navigation links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto align-items-center"> <!-- Added align-items-center to vertically center the links -->
+        <!-- Home link -->
         <li class="nav-item">
           <a class="nav-link mx-2 active" aria-current="page" href="#">Accueil</a>
         </li>
-        <!--  <li class="nav-item">
-          <a class="nav-link mx-2" href="#">Compte</a>
-        </li>-->
+        <!-- About Us link -->
         <li class="nav-item">
-          <a class="nav-link mx-2" href="#">About Us</a>
+          <a class="nav-link mx-2" href="#about-us">About Us</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link mx-2" [routerLink]="['/operations']"
-            [queryParams]="{ unCompteId: accounts[0].id }"
-            *ngIf="isLoggedIn ">accounts </a>
+        <!-- Services link -->
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#services">Services</a>
         </li>
+        <!-- Team link -->
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="operations" *ngIf="isLoggedIn">operations</a>
-        </li> -->
-
+          <a class="nav-link mx-2" href="#team">Team</a>
+        </li>
+        <!-- Contact Us link -->
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion'
-            }}</a>
+          <a class="nav-link mx-2" routerLink="contact">Contact Us</a>
+        </li>
+        <!-- Connexion/Logout link, conditionally shown based on 'isLoggedIn' property -->
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion' }}</a>
+        </li>
       </ul>
-      <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+
+      <!-- Social media links, visible only on large screens -->
+      <ul class="navbar-nav ms-auto d-none d-lg-inline-flex align-items-center"> <!-- Added align-items-center to vertically center the social media links -->
+        <!-- Google Plus link -->
         <li class="nav-item mx-2">
-          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+          <a class="nav-link text-dark h3" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
         </li>
+        <!-- Twitter link -->
         <li class="nav-item mx-2">
-          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link text-dark h3" href="" target="blank"><i class="fab fa-twitter"></i></a>
         </li>
+        <!-- Facebook link -->
         <li class="nav-item mx-2">
-          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
+          <a class="nav-link text-dark h3" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- Login component, hidden when 'showLogin' is false -->
 <app-login [hidden]="!showLogin" (onLogin)="loginSuccessful($event)" (onLogout)="logoutSuccessful()"></app-login>

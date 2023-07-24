@@ -1,42 +1,42 @@
-
-      <div class="container">
-          <div class="col-12 shadow p-3 mb-5 bg-white rounded">
-            <div class="card">
-              <div class="card-body">
-                <div class="table-responsive" >
-                <div class="table-responsive">  
-                  <table class="table table-hover mb-0" >
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Numéro</th>
-                        <th scope="col">Désignation</th>
-                        <th scope="col">Taux</th>
-                        <th scope="col">Découvert autorisé</th>
-                        <th scope="col">Solde</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody *ngFor="let account of accounts">
-                      <tr>
-                        <th scope="row"></th>
-                        <td ><a >{{account.id}}</a></td>
-                        <td ><a [routerLink]="['/operations']"  [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.libelle}}</a></td>
-                        <td>{{account.taux}}</td>
-                        <td>{{account.decouvert}}</td>
-                        <td>{{account.solde}}</td>
-                        <td>
-                          <button class="btn btn-primary" [routerLink]="['/virement']"  [queryParams]="{ userId: userId, accounts: convertToJSON(accounts) }">
-                              Virement
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container">
+  <div class="col-12 shadow p-3 mb-5 bg-white rounded">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Numéro</th>
+                <th scope="col">Désignation</th>
+                <th scope="col">Taux</th>
+                <th scope="col">Découvert autorisé</th>
+                <th scope="col">Solde</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let account of accounts">
+              <tr>
+                <th scope="row"></th>
+                <td><a>{{account.id}}</a></td>
+                <td>
+                  <!-- The routerLink attribute sets the link to the '/operations' route with query parameters -->
+                  <a [routerLink]="['/operations']" [queryParams]="{ userId: userId, unCompteId: account.id }">{{account.libelle}}</a>
+                </td>
+                <td>{{account.taux}}</td>
+                <td>{{account.decouvert}}</td>
+                <td>{{account.solde}}</td>
+                <td>
+                  <!-- The routerLink attribute sets the link to the '/virement' route with query parameters -->
+                  <button class="btn btn-primary" [routerLink]="['/virement']" [queryParams]="{ userId: userId, accounts: convertToJSON(accounts) }">
+                    Virement
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
- 
+      </div>
+    </div>
+  </div>
+</div>

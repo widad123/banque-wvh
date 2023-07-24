@@ -1,52 +1,56 @@
+/* Styles for the banner section */
+/* ---------------------------- */
 
-/* 
----------------------------------------------
-banner
---------------------------------------------- 
-*/
-#top .col-lg-4,
-#top .col-lg-8 {
-  padding: 0px;
+/* Set background color for the .banner class */
+.banner {
+  background-color: #F8D49D; /* Use #F8D49D (light yellow) as the background color */
 }
 
-#top .left-content {
-  
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 100%;
+
+/* Styles for the different sections */
+/* -------------------------------- */
+
+/* Align items in the row to center */
+.row {
+  align-items: center; /* Vertically center-align items within the row */
 }
 
-#top .left-content .inner-content {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 50%;
+/* Styles for the #banner section */
+/* ----------------------------- */
+
+/* Set background color, height, and padding for the #banner ID */
+#banner {
+  background-color: #3B74C0; /* Use #3B74C0 (blue) as the background color */
+  height: 600px; /* Set the height of the banner section to 600 pixels */
+  padding: 3rem; /* Add 3 units of padding around the content in the #banner section */
 }
 
-#top .left-content h4 {
-  font-family: 'Dancing Script', cursive;
-  color: #fff;
-  font-size: 54px;
-  font-weight: 700;
+/* Styles for the #about-us section */
+/* ------------------------------- */
+
+/* Set background color, height, and padding for the #about-us ID */
+#about-us {
+  background-color: #E3EAFB; /* Use #E3EAFB (light blue) as the background color */
+  height: 800px; /* Set the height of the about-us section to 800 pixels */
+  padding: 4rem; /* Add 4 units of padding around the content in the #about-us section */
 }
 
-#top .left-content h6 {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 3px;
-  margin-top: 5px;
+/* Styles for the #services section */
+/* -------------------------------- */
+
+/* Set background color, height, and padding for the #services ID */
+#services {
+  background-color: #FEFFFF; /* Use #FEFFFF (off-white) as the background color */
+  height: 800px; /* Set the height of the services section to 800 pixels */
+  padding: 4rem; /* Add 4 units of padding around the content in the #services section */
 }
 
-#top .left-content .main-white-button  {
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
+/* Styles for the #team section */
+/* ---------------------------- */
 
-#top .left-content .main-white-button a {
-  display: inline-block;
+/* Set background color, height, and padding for the #team ID */
+#team {
+  background-color: #E3EAFB;/* Use #3B74C0 (blue) as the background color */
+  height: 700px; /* Set the height of the team section to 700 pixels */
+  padding: 5rem; /* Add 5 units of padding around the content in the #team section */
 }
