@@ -8,6 +8,7 @@ import { ListAccountComponent } from './component/list-account/list-account.comp
 import { OperationsComponent } from './component/operations/operations.component';
 import { BodyComponent } from './component/body/body.component';
 import { VirementComponent } from './component/virement/virement.component';
+import { ContactFormComponent } from './component/contact-form/contact-form.component';
 
 // Define your routes using the Routes array
 const routes: Routes = [
@@ -24,7 +25,10 @@ const routes: Routes = [
   { path: 'operations', component: OperationsComponent },
 
   // Route for the VirementComponent
-  { path: 'virement', component: VirementComponent }
+  { path: 'virement', component: VirementComponent },
+
+    // Route for the conatctFormComponenet
+    { path: 'contact', component: ContactFormComponent }
 ];
 
 @NgModule({
