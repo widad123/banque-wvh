@@ -41,6 +41,7 @@ export class NabBarComponent {
   logoutSuccessful() {
     this.isLoggedIn = false;
     this.showLogin = false;
+    this.router.navigate(['/']);
   }
 
   /**

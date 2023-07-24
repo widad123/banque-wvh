@@ -58,5 +58,6 @@ export class LoginComponent {
    */
   logout() {
     this.onLogout.emit(); // Emit the logout event to the parent component.
+    this.router.navigate(['/']);
   }
 }

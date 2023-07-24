@@ -38,7 +38,7 @@
         </li>
         <!-- Connexion/Logout link, conditionally shown based on 'isLoggedIn' property -->
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="login" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion' }}</a>
+          <a class="nav-link mx-2" [routerLink]="isLoggedIn ? '' : 'login'" (click)="showLoginForm()">{{ isLoggedIn ? 'Logout' : 'Connexion' }}</a>
         </li>
       </ul>
 
