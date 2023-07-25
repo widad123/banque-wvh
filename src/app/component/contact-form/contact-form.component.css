@@ -6,7 +6,24 @@
  /* Use #FFFFFF (white) as the background color */
   height: 900px; /* Set the height of the contact section to 900 pixels */
   padding: 3rem; /* Add 3 units of padding around the content in the #contact section */
+  background-image: url('/assets/image/hero_2.jpg');
+  background-size: cover;
+  background-position: center;
   
+}
+input{
+  /* A light transparent color with 50% opacity (alpha = 0.5) */
+background-color: rgba(255, 255, 255, 0.5);
+
+}
+textarea{
+  /* A light transparent color with 50% opacity (alpha = 0.5) */
+background-color: rgba(255, 255, 255, 0.5);
+
+}
+.container {
+
+  height: 100vh; /* Adjust the height as needed */
 }
 
 
@@ -15,7 +32,7 @@
 
 /* Set background color, width, padding, and center the #contactForm ID */
 #contactForm {
-  background-color: #041C2D; /* Use #041C2D (dark blue) as the background color */
+  background-color: transparent; /* Use #041C2D (dark blue) as the background color */
   width: 900px; /* Set the width of the contact form section to 900 pixels */
   padding: 5rem; /* Add 5 units of padding around the content in the #contactForm section */
   margin: auto; /* Center the #contactForm section horizontally on the page */

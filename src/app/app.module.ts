@@ -15,7 +15,7 @@ import localeFr from '@angular/common/locales/fr';
 import { FooterComponent } from './component/footer/footer.component';
 import { VirementComponent } from './component/virement/virement.component';
 import { ContactFormComponent } from './component/contact-form/contact-form.component';
-import { RegisterComponent } from './component/register/register.component';
+
 import { BodyComponent } from './component/body/body.component';
 
 // Register French locale for formatting dates, numbers, etc.
@@ -32,7 +32,6 @@ registerLocaleData(localeFr);
     VirementComponent,
     FooterComponent,
     ContactFormComponent,
-    RegisterComponent,
     BodyComponent
   ],
 
