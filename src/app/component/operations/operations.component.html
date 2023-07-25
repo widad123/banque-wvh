@@ -1,11 +1,9 @@
+<div class="container shadow p-3 mb-5 bg-white rounded">
 <!-- Section displaying the title with dynamic account number -->
 <p class="text-lg-left text-center">Historique de vos opérations effectuées sur le compte n° {{unCompteId}}</p>
-
 <!-- Section displaying search criteria -->
 <p class="text-md-left text-center">Critères de recherche :</p>
-
 <!-- Container for the search form -->
-<div class="container shadow p-3 mb-5 bg-white rounded">
   <div class="col-12">
     <div class="card">
       <div class="card-body">
@@ -48,7 +46,8 @@
               </tbody>
             </table>
             <!-- Submit button to trigger search -->
-            <button type="submit" class="btn btn-primary" (click)="handleClick()">Rechercher</button>
+            <button type="submit" class="btn btn-primary " (click)="handleClick()">Rechercher</button>
+            <button class="btn btn-primary mx-2"  [routerLink]="['/accounts']" [queryParams]="{ userId: unUtilisateurId }">List des comptes</button>
           </form>
         </div>
       </div>

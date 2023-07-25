@@ -43,7 +43,12 @@ export class NabBarComponent {
     this.showLogin = false;
     this.router.navigate(['/']);
   }
-
+// Function to handle logout
+ logout() {
+  // Your logout logic here
+  // Set isLoggedIn to false after the user logs out
+  this.isLoggedIn = false;
+}
   /**
    * This method is triggered when the login link is clicked.
    * It shows the login form and sets 'isLoggedIn' to false.
