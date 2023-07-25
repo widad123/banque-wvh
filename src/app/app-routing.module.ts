@@ -11,6 +11,7 @@ import { VirementComponent } from './component/virement/virement.component';
 import { ContactFormComponent } from './component/contact-form/contact-form.component';
 import { FooterComponent } from './component/footer/footer.component';
 
+
 // Define your routes using the Routes array
 const routes: Routes = [
   // Default route, will load BodyComponent when the path is empty ('/')
@@ -29,8 +30,10 @@ const routes: Routes = [
   // Route for the VirementComponent
   { path: 'virement', component: VirementComponent },
 
-    // Route for the conatctFormComponenet
-    { path: 'contact', component: ContactFormComponent }
+  // Route for the conatctFormComponenet
+  { path: 'contact', component: ContactFormComponent }
+
+ 
 ];
 
 @NgModule({

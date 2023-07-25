@@ -24,4 +24,5 @@ export class LoginService {
     // The response will be a number representing the authentication status
     return this.http.post<number>(`${this.baseUrl}/authentifier`, null, { params });
   }
+
 }
